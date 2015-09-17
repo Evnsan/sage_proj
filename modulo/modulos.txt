@@ -1,0 +1,60 @@
+Este arquivo contém a descrição de cada objeto/arquivo código contido no projeto.
+
+Matriz:
+    Classe dos objetos sobre os quais a biblioteca ira atuar. Basicamento uma Matriz numerica.
+    Construtor:
+        + Matriz(n): cria objeto com matriz interna m E R^(nxn)
+
+    Deve disponibilizar:
+        + getTam() : devolve número de colunas/linhas da matriz interna.
+        + getEl(linha, coluna): devolve elemento que ocupa a posição (linha,coluna).
+        + getLin(n): devolve os elentos da linha n.
+        + getCol(n): devolve os elentos da coluna n.
+        + editEl(linha, coluna, valor): modifica valor do elemento na posição (linha, coluna).
+
+MatrizA:
+    Classe de objetos especializados de Matriz que emgloba matrizes geradas aleatóriamente de 
+    acordo com distribuição desejada.
+    Construtor:
+        + MatriziA(n, "dist"): cria objeto com matriz interna m E R^(nxn) gerada aleatoriamen-
+        te seguindo a distribuição "dist".
+
+    Deve disponibilizar:
+        - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+
+MatrizCV:
+    Classe de objetos especializados de Matriz que emgloba matrizes geradas a partir da corre-
+    lação entre cada vetor de uma lista de vetores. Assim a entrada M[0][2]  sera igual a cor-
+    relação entre o primeiro vetor e o terceiro.
+    Para esta classe:
+        um vetor será uma lista de valores.
+        um valor será um inteiro ou um float. Possivelmente aceite qualquer valor do tipo nu-
+        mero do python(verificar).
+    Construtor:
+        + MatriziCV( N, ((vetor1), (vetor2) ... (vetorN)) ): cria objeto com matriz interna 
+        m E R^(NxN) gerada pelos coeficiente de correlação entre os vetores recebidos como en-
+        trada.
+
+    Deve disponibilizar:
+        - centraliza( ((vetor1), (vetor2), ..., (vetorN)) ): para cada vetor recebido na en-
+        trada, transporta tal vetor para ter centro na origem(normaliza pela E(v[i])), e re-
+        torna uma lista de tais vetores centralizados.
+        - unitariza((():  transforma vetor em vetor unitário.
+        - geraM(): gera a matriz interna dos coeficientes de correlação propriamente dita.
+
+Limiar:
+    Classe de objetos que será usada para controlar o nivel de relevância de uma entrada da
+    matriz. Isto é, de acordo com tal limiar, o valor de uma entrada da matriz será qualifica-
+    do como relevante 1 ou irrelevante 0. Desta maneira será possivel contruir um grafo com
+    arestas somente entre valores relevantes de uma matriz base. 
+    Construtor:
+        + Limiar("dist", [(valor)]): cria objeto que irá gerar valores para limar seguindo a 
+        distribuição "dist". A lista de valores que aparece condicionalmente neste prototipo é
+        para distribuições que pedem parâmetros.
+
+    Deve disponibilizar:
+        - setUniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+        + setConstante(n): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+        - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+        - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+
