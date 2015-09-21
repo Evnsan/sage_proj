@@ -51,10 +51,23 @@ Limiar:
         + Limiar("dist", [(valor)]): cria objeto que irá gerar valores para limar seguindo a 
         distribuição "dist". A lista de valores que aparece condicionalmente neste prototipo é
         para distribuições que pedem parâmetros.
+        Obs. atualmente não recebe nenhum valor de entrada e se utiliza das funções set"Dist()
+        para definir o limiar gerado.
 
     Deve disponibilizar:
-        - setUniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
-        + setConstante(n): gera matriz com cada entrada gerada seguindo distribuição uniforme.
-        - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
-        - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
+        + setUniforme(): defini que o objeto instanciado se utilizará de ditrinuição uniforme
+        paragerar os limiares.   
+        + setConstante(n): defini que o objeto instanciado se utilizará de ditrinuição unifor-
+        me paragerar os limiares.
+        + next(): gera novo limiar "valor de corte".
+        + get(): retorna o valor de corte.
+
+Limiarizador:
+    Classe de objeto "Singleton" que será usada para aplicarlar o limiar em uma dada matriz.
+    Construtor:
+        + Limiarizador(): cria objeto que irá gerar matrizes resultantes da apllicação do li-
+        miar.
+
+    Deve disponibilizar:
+        + execute(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com .
 
