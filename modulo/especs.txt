@@ -1,5 +1,6 @@
 Este arquivo contém a descrição de cada objeto/arquivo código contido no projeto.
 
+######################################################
 Matriz:
     Classe dos objetos sobre os quais a biblioteca ira atuar. Basicamento uma Matriz numerica.
     Construtor:
@@ -12,6 +13,7 @@ Matriz:
         + getCol(n): devolve os elentos da coluna n.
         + editEl(linha, coluna, valor): modifica valor do elemento na posição (linha, coluna).
 
+######################################################
 MatrizA:
     Classe de objetos especializados de Matriz que emgloba matrizes geradas aleatóriamente de 
     acordo com distribuição desejada.
@@ -22,6 +24,7 @@ MatrizA:
     Deve disponibilizar:
         - uniforme(): gera matriz com cada entrada gerada seguindo distribuição uniforme.
 
+######################################################
 MatrizCV:
     Classe de objetos especializados de Matriz que emgloba matrizes geradas a partir da corre-
     lação entre cada vetor de uma lista de vetores. Assim a entrada M[0][2]  sera igual a cor-
@@ -42,6 +45,7 @@ MatrizCV:
         - unitariza((():  transforma vetor em vetor unitário.
         - geraM(): gera a matriz interna dos coeficientes de correlação propriamente dita.
 
+######################################################
 Limiar:
     Classe de objetos que será usada para controlar o nivel de relevância de uma entrada da
     matriz. Isto é, de acordo com tal limiar, o valor de uma entrada da matriz será qualifica-
@@ -62,6 +66,7 @@ Limiar:
         + next(): gera novo limiar "valor de corte".
         + get(): retorna o valor de corte.
 
+######################################################
 Limiarizador:
     Classe de objeto "Singleton" que será usada para aplicarlar o limiar em uma dada matriz.
     Construtor:
@@ -79,6 +84,7 @@ Limiarizador:
         + executeE(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com limiar passado
         como parâmetro. obs: utiliza um valor de limiar para cada entrada da Matriz.
 
+######################################################
 ContadorGraus:
     Classe de objeto "Singleton" que será usada para gerar uma lista de graus de cada vertice.
     Construtor:
