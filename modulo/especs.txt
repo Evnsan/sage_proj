@@ -65,9 +65,29 @@ Limiar:
 Limiarizador:
     Classe de objeto "Singleton" que será usada para aplicarlar o limiar em uma dada matriz.
     Construtor:
-        + Limiarizador(): cria objeto que irá gerar matrizes resultantes da apllicação do li-
+        + Limiarizador(): cria objeto que irá gerar matrizes resultantes da aplicação do li-
         miar.
 
     Deve disponibilizar:
-        + execute(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com .
+        + executeM(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com limiar passado
+        como parâmetro. obs: utiliza somente um valor de limiar para todas as entradas da Ma-
+        triz.
+        + executeL(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com limiar passado
+        como parâmetro. obs: utiliza um valor de limiar para cada linha da Matriz.
+        + executeC(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com limiar passado
+        como parâmetro. obs: utiliza um valor de limiar para cada coluna da Matriz.
+        + executeE(Matriz, Limiar): retorna nova matriz de 0/1 de acordo com limiar passado
+        como parâmetro. obs: utiliza um valor de limiar para cada entrada da Matriz.
 
+ContadorGraus:
+    Classe de objeto "Singleton" que será usada para gerar uma lista de graus de cada vertice.
+    Construtor:
+        + Limiarizador(): cria objeto que irá gerar listas contendo o grau de cada vertice da
+        Matriz de adjacência.
+
+    Deve disponibilizar:
+        + execute(Matriz): retorna lista de inteiros contendo para cada entrada l[v] o valor
+        do grau do vertice v.
+        + executeN(Matriz): retorna lista de valores reais contendo para cada entrada l[v] o
+        valor do grau do vertice v normalizado pelo grau maximo.
+            (i.e. dividido por 2 * numero_de_vertices - 1).
